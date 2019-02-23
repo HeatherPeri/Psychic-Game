@@ -1,9 +1,9 @@
 
 
     var wins = 0;
-    var Loses = 0;
-    var GuessLeft = 0;
-    var guessFar = 0;
+    var loses = 0;
+    var guessLeft = 0;
+    var soFar = 0;
     var guessesmade =[];
 
  var letters = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", 
@@ -17,23 +17,27 @@
 
     function reset() {
         guessesLeft = 15;
-        soFar = 0
+        soFar = 0;
         guessesMade = [];
     }
-    var computerGuess = letters 
+    // var computerGuess = letters 
+    // console.log(computerGuess + "computerGuess")
  document.onkeyup = function(event) {
     var guess = event.key;
-    var ourguess = ourguess[Math.floor(Math.random() * letters.length)];
- }
+    console.log(guess + "userguess")
+    var computerGuess = letters[Math.floor(Math.random() * letters.length)];
+     console.log(computerGuess + "computerGuess")
 
- if (guessesmade === ourguess){
-    wins++;
- }
+
+    if (guess === computerGuess){
+        wins++;
+        console.log(wins +"you won")
+    }
     else{
         loses++;
+        console.log(loses +"you lost")
     }
-
-
+ }
 
 
     
