@@ -2,7 +2,7 @@
 
     var wins = 0;
     var loses = 0;
-    var guessLeft = 0;
+    var guessesLeft = 0;
     var soFar = 0;
     var guessesmade =[];
 
@@ -13,12 +13,12 @@
     var winsText = document.getElementById("wins");
     var losesText = document.getElementById("loses");
     var guessesleftText = document.getElementById("guessesleft");
-    var userguessesText = document.getElementById("userguesses");
+    var guessesmadeText = document.getElementById("userguesses");
 
     function reset() {
-        guessesLeft = 15;
+        guessesleft = 15;
         soFar = 0;
-        guessesMade = [];
+        guessesmade = [];
     }
     // var computerGuess = letters 
     // console.log(computerGuess + "computerGuess")
@@ -36,8 +36,15 @@
     else{
         loses++;
         console.log(loses +"you lost")
+    
+ 
+
+ winsText.textContent = "You Won: " + wins;
+ losesText.textContent = "You Lost" + loses;
+ guessesleftText.textContent = "Guesses Left:" + guessesLeft;
+ guessesmadeText.textContent = "losses: " + loses;
     }
- }
+ };
 
 
     
