@@ -9,11 +9,11 @@
  var letters = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", 
  "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
 
-    var directionsText = document.getElementById("directions-text");
-    var winsText = document.getElementById("wins-text");
-    var guessesleftText = document.getElementById("guessesleft-text");
-    var guessesmadeText = document.getElementById("userguesses-text");
-    var losesText = document.getElementById("loses-text");
+    var directionsText = document.getElementById("directions");
+    var winsText = document.getElementById("wins");
+    var guessesleftText = document.getElementById("guessesleft");
+    var guessesmadeText = document.getElementById("userguesses");
+    var losesText = document.getElementById("loses");
 
     function reset() {
         guessesleft = 15;
@@ -33,16 +33,16 @@
         wins++;
         console.log(wins +"you won")
     }
-    if else{
+    else{
         loses++;
         console.log(loses +"you lost")
     }
  
-
- winsText.textContent = wins;
- losesText.textContent = loses;
- guessesleftText.textContent = guessesLeft;
- guessesmadeText.textContent = guessesmade;
+console.log(winsText)
+ winsText.textContent = ("wins:" + wins);
+ losesText.textContent = ("Loses:" + loses);
+ guessesleftText.textContent = ("Guesses Left:" + guessesleft);
+ guessesmadeText.textContent = ("Guesses Made:" + guess);
 
  };
 
